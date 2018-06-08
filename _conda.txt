@@ -1,0 +1,41 @@
+
+# Current Environments
+conda env list
+
+# Installed package in environment
+conda env
+
+# Create environment
+conda create --name testenv
+conda create --name testenv python=3.7
+
+# Activate environment
+conda activate testenv
+
+# Deactive
+conda deactivate
+
+# Install packages
+# inside environment
+conda install pandas=0.24.1
+# outside environment
+conda install -n conda-env pandas=0.24.1
+
+# Install from other repositories
+conda install --channel conda-forge opencv
+
+# Updating packages
+conda update pandas
+
+# Exporting environment
+conda env export --file environment.yml
+conda env export -n conda-env -f environment.yml
+
+# Creating environment from file
+conda env create -n conda-env -f environment.yml
+
+##sidenote:
+pip freeze > requirements.txt
+pip install -r requirements.txt
+# conda replicates own installation, that is why its list of libraries is longer, and has python itself.
+# pip produces a list of packages that were installed on top of standard library
