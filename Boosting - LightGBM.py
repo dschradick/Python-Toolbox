@@ -12,6 +12,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split
 from numpy import loadtxt
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 #### Daten laden
 filename = '~/Documents/Data/housing.csv'
